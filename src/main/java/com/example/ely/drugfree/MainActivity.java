@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //this is a test
 
         final Button bPanic = (Button) findViewById(R.id.bPanic);
         final EditText etTestinfo = (EditText) findViewById(R.id.etTestinfo);
