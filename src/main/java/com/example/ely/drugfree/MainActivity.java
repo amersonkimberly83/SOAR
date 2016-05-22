@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
         final Button bPanic = (Button) findViewById(R.id.bPanic);
         final EditText etPName = (EditText) findViewById(R.id.etPName);
-        final EditText etPEmergencyContact = (EditText) findViewById(R.id.etPEmergencyContact);
         final EditText etPBio = (EditText) findViewById(R.id.etPBio);
         final EditText etPJournal = (EditText) findViewById(R.id.etPJournal);
 
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         etPBio.getEditableText().append(sp.getString("bio", ""));
 
         etPName.getEditableText().append(sp.getString("username", ""));
-        etPEmergencyContact.getEditableText().append(sp.getString("emergencyContact", ""));
 
 
 

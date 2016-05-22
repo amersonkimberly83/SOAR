@@ -83,7 +83,8 @@
         android:id="@+id/etBio"
         android:hint="Bio"
         android:layout_above="@+id/bRegister"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/bRegister" />
 
     <EditText
         android:layout_width="wrap_content"

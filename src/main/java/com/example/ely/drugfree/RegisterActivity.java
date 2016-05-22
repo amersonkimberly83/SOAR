@@ -45,6 +45,17 @@ public class RegisterActivity extends AppCompatActivity {
         final Switch switchUser = (Switch) findViewById(R.id.switchUser);
         final Switch switchSupport = (Switch) findViewById(R.id.switchSupporter);
 
+        SharedPreferences sp = getSharedPreferences("profileInfo",0);
+        etUsername.getEditableText().append(sp.getString("username", ""));
+        etEmail.getEditableText().append(sp.getString("email", ""));
+        etEmergencyContact.getEditableText().append(sp.getString("emergencyContact", ""));
+        etBio.getEditableText().append(sp.getString("bio", ""));
+
+        if(sp.getString("emergencyMsg", "") != "") {
+            etEmergencyMsg.getEditableText().clear();
+            etEmergencyMsg.getEditableText().append(sp.getString("emergencyMsg", ""));
+        }
+
 
         // Spinner functions
         //final Spinner sUsertype = (Spinner) findViewById(R.id.sUsertyp);
