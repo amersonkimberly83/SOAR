@@ -2,4 +2,10 @@
     <string name="app_name">SOAR</string>
     <string name="title_activity_profile_page">ProfilePage</string>
     <string name="title_activity_new_chat">NewChat</string>
+    <string-array name="users">
+        <item>user42</item>
+        <item>coolKid24</item>
+        <item>notThePolice</item>
+        <item>mrRogers</item>
+    </string-array>
 </resources>
