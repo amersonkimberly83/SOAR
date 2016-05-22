@@ -27,12 +27,19 @@ public class MainActivity extends AppCompatActivity {
         final Button bResources = (Button) findViewById(R.id.bResources);
         final Button bChat = (Button) findViewById(R.id.bChat);
         final Button bFind = (Button) findViewById(R.id.bFind);
-        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.SEND_SMS},1);
+        //ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.SEND_SMS},1);
 
         bPanic.setOnClickListener(new View.OnClickListener()   {
 
             @Override
             public void onClick(View v) {
+
+                Intent panicIntent = new Intent(MainActivity.this, ConfirmPage.class);
+                MainActivity.this.startActivity(panicIntent);
+
+
+
+                /*
                 SharedPreferences sp = getSharedPreferences("profileInfo", 0);
 
                 SmsManager sm = SmsManager.getDefault();
@@ -40,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 String phoneNumber = sp.getString("emergencyContact", "");
                 String message = sp.getString("emergencyMsg", "");
                 sm.sendTextMessage(phoneNumber, null, message, null, null);
-
+                */
                 //etTestinfo.getEditableText().clear();
                 //etTestinfo.getEditableText().append(sp.getString("emergencyContact", ""));
 
