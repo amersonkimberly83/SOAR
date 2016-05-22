@@ -39,9 +39,10 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/etTestinfo"
+        android:id="@+id/etPName"
         android:layout_below="@+id/bChat"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -50,5 +51,38 @@
         android:id="@+id/bFind"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/bPanic" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPEmergencyContact"
+        android:layout_below="@+id/etPName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPBio"
+        android:layout_below="@+id/etPEmergencyContact"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPJournal"
+        android:layout_below="@+id/etPBio"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/etPBio"
+        android:hint="Journal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/bSubmit"
+        android:layout_below="@+id/etPJournal"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

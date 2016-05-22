@@ -33,5 +33,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:inputType="text"
-        android:text="enter message" />
+        android:hint="Enter Message" />
 </RelativeLayout>
