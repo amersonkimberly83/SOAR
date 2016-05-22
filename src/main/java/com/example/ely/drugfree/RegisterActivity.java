@@ -39,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText etEmail = (EditText) findViewById(R.id.etEmail);
         final EditText etEmergencyContact = (EditText) findViewById(R.id.etEmergencyContact);
         final EditText etBio = (EditText) findViewById(R.id.etBio);
+        final EditText etEmergencyMsg = (EditText) findViewById(R.id.etEmergencyMsg);
         // Spinner functions
         final Spinner sUsertype = (Spinner) findViewById(R.id.sUsertype);
         //Buttons

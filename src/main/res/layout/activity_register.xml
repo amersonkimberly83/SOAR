@@ -92,9 +92,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/etBio"
+        android:hint="Bio"
+        android:layout_below="@+id/etEmergencyMsg"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/etEmergencyContact" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEmergencyMsg"
+        android:hint="Emergency Msg"
+        android:text="Please help me"
         android:layout_below="@+id/etEmergencyContact"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etEmergencyContact"
-        android:hint="Bio" />
+        android:layout_alignEnd="@+id/etEmergencyContact" />
 
 </RelativeLayout>
