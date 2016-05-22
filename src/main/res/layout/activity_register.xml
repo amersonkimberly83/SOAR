@@ -48,22 +48,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sUsertype"
-        android:spinnerMode="dropdown"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:clickable="true"
-        android:layout_alignEnd="@+id/etEmail"
-        android:layout_above="@+id/etEmergencyContact" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="What type of user are you?"
+        android:text="Are you looking for support"
         android:id="@+id/textView3"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/etPassword"
@@ -86,15 +75,59 @@
         android:hint="Emergency Contact"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/sUsertype" />
+        android:layout_alignEnd="@+id/etEmail" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/etBio"
-        android:layout_below="@+id/etEmergencyContact"
+        android:hint="Bio"
+        android:layout_above="@+id/bRegister"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEmergencyMsg"
+        android:hint="Emergency Msg"
+        android:text="This person is trying to contact you for urgent support. Please reach out to them quickly, if possible. This message was automatically generated using SOAR."
+        android:layout_above="@+id/etBio"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Emergency Text"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/etEmergencyMsg"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchUser"
+        android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etEmergencyContact"
-        android:hint="Bio" />
+        android:layout_alignParentEnd="true"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Are you looking to give support"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/switchUser"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchSupporter"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:checked="false" />
 
 </RelativeLayout>
