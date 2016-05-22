@@ -25,6 +25,9 @@ public class loginactivity extends AppCompatActivity {
 
         final TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
 
+
+        // What this does is send you to the main activity when you click the login button
+        // the first line of code has the app wait for the user to press the button and start running functions.
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +37,7 @@ public class loginactivity extends AppCompatActivity {
             }
         });
 
-
+        // what this does is send you to the registration page of the app
         bToRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
