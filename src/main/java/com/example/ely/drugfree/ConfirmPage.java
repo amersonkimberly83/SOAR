@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 // Ben use this page to make a confirmation on the panic.
 public class ConfirmPage extends AppCompatActivity {
@@ -21,6 +22,11 @@ public class ConfirmPage extends AppCompatActivity {
         final Button bConfirm = (Button) findViewById(R.id.bConfirm);
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.SEND_SMS},1);
 
+
+        final EditText etPEmergencyContact = (EditText) findViewById(R.id.etPEmergencyContact);
+
+        SharedPreferences sp = getSharedPreferences("profileInfo", 0);
+        etPEmergencyContact.getEditableText().append(sp.getString("emergencyContact", ""));
 
         bConfirm.setOnClickListener(new View.OnClickListener()   {
 
@@ -36,7 +42,7 @@ public class ConfirmPage extends AppCompatActivity {
 
                 Intent confirmIntent = new Intent(ConfirmPage.this, MainActivity.class);
                 ConfirmPage.this.startActivity(confirmIntent);
-                
+
 
                 //etTestinfo.getEditableText().clear();
                 //etTestinfo.getEditableText().append(sp.getString("emergencyContact", ""));

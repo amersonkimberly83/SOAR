@@ -21,6 +21,9 @@ public class loginactivity extends AppCompatActivity {
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
 
+        SharedPreferences sp = getSharedPreferences("profileInfo",0);
+        etUsername.getEditableText().append(sp.getString("username", ""));
+
         final Button bLogin = (Button) findViewById(R.id.bLogin);
         final Button bToRegister = (Button) findViewById(R.id.bToRegister);
 
