@@ -1,6 +1,7 @@
 package com.example.ely.drugfree;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,9 +32,22 @@ public class loginactivity extends AppCompatActivity {
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(loginactivity.this, MainActivity.class);
-                loginactivity.this.startActivity(loginIntent);
+                SharedPreferences sp = getSharedPreferences("profileInfo", 0);
+                String userIn = etUsername.getText().toString();
+                String passIn = etPassword.getText().toString();
+                String userProf = sp.getString("username", "");
+                String passProf = sp.getString("password", "");
 
+                if(userIn.equals("") || passIn.equals("") || ! passIn.equals(passProf) ||
+                        !userIn.equals(userProf))
+                {
+                    registerLink.getEditableText().clear();
+                    registerLink.getEditableText().append("Incorrect Username or Password");
+
+                } else {
+                    Intent loginIntent = new Intent(loginactivity.this, MainActivity.class);
+                    loginactivity.this.startActivity(loginIntent);
+                }
             }
         });
 

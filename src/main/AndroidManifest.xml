@@ -30,6 +30,8 @@
 
         <activity android:name=".Chat" />
         <activity android:name=".Find"></activity>
+
     </application>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
 </manifest>

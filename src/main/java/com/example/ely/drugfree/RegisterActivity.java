@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Switch;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -40,8 +41,13 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText etEmergencyContact = (EditText) findViewById(R.id.etEmergencyContact);
         final EditText etBio = (EditText) findViewById(R.id.etBio);
         final EditText etEmergencyMsg = (EditText) findViewById(R.id.etEmergencyMsg);
+
+        final Switch switchUser = (Switch) findViewById(R.id.switchUser);
+        final Switch switchSupport = (Switch) findViewById(R.id.switchSupporter);
+
+
         // Spinner functions
-        final Spinner sUsertype = (Spinner) findViewById(R.id.sUsertype);
+        //final Spinner sUsertype = (Spinner) findViewById(R.id.sUsertyp);
         //Buttons
         final Button bRegister = (Button) findViewById(R.id.bRegister);
 
@@ -69,11 +75,14 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
                 String emergencyContact = PhoneNumberUtils.formatNumber(etEmergencyContact.getText().toString());
                 String bio = etBio.getText().toString();
+                String emergencyMsg = etEmergencyMsg.getText().toString();
+
+
 
                 SharedPreferences sp = getSharedPreferences("profileInfo", 0);
                 sp.edit().putString("username", username).putString("password", password).
                         putString("email", email).putString("emergencyContact", emergencyContact).
-                        putString("bio", bio).apply();
+                        putString("bio", bio).putString("emergencyMsg", emergencyMsg).apply();
 
 
                 Intent registerIntent = new Intent(RegisterActivity.this, loginactivity.class);
